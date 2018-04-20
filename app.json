@@ -1,0 +1,28 @@
+{
+  "name": "bfc-owners2",
+  "description": "The admin microservice of bfc-owners2",
+  "website": "http://www.forestadmin.com/lumber",
+  "repository": "https://github.com/ForestAdmin/lumber",
+  "env": {
+    "FOREST_AUTH_SECRET": {
+      "description": "A random JWT signing secret to protect your admin API",
+      "value": "58e77412abc92a25d61beb3b5df65dc1e6b0d8b12e65a93a58dc48b0ef7cdfdbe62e77cc2e0df22728b79c9634868cf3"
+    },
+    "FOREST_ENV_SECRET": {
+      "description": "The Forest environment secret",
+      "value": "48ebac3e31b35f01eeccb04b3bc5ebd17ae4e56a94cf4ad00c965be7a2915ef6"
+    },
+    "DATABASE_URL": {
+      "description": "The remote database connection URL",
+      "value": "mysql://<user>:<password>@<host>:<port>/<databaseName>"
+    },
+    "SSL_DATABASE": {
+      "description": "Specify if a SSL database connection is required.",
+      "value": "true"
+    },
+    "ENCRYPT_DATABASE": {
+      "description": "Specify if the database connection is encrypted.",
+      "value": "false"
+    }
+  }
+}
