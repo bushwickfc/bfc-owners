@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  var Model = sequelize.define('owner_owner_type_history', {
+  var Model = sequelize.define('owner_owner_type', {
     'owner_id': {
       type: DataTypes.INTEGER,
       primaryKey: true 
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
     },
   }, {
-    tableName: 'owner_owner_type_history',
+    tableName: 'owner_owner_type',
     underscored: true,
     
     
