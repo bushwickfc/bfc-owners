@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('owner_view', {
     'pos_id': {
       type: DataTypes.STRING,
+      primaryKey: true
     },
     'owner_type': {
       type: DataTypes.STRING,
@@ -23,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     'last_name': {
       type: DataTypes.STRING,
     },
-    'concat(o.display_name, s.pos_display, pp.pos_display)': {
+    'pos_display': {
       type: DataTypes.STRING,
     },
     'hour_balance': {
