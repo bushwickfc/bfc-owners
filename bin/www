@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 'use strict';
-require('dotenv').load();
 var app = require('../app');
 var debug = require('debug')('{name}:server');
 var http = require('http');
