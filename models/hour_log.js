@@ -31,6 +31,11 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Model.associate = (models) => {
+    Model.belongsTo(models.hour_reason, {
+      foreignKey: 'hour_reason',
+      targetKey: 'hour_reason',
+      as: '_hour_reason',
+    });
   };
 
   return Model;
