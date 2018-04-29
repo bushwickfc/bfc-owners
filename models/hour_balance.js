@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('hour_balance', {
     'email': {
       type: DataTypes.STRING,
+      primaryKey: true
     },
     'balance': {
       type: DataTypes.DOUBLE,
