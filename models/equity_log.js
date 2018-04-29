@@ -2,8 +2,8 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('equity_log', {
-    'owner_id': {
-      type: DataTypes.INTEGER,
+    'email': {
+      type: DataTypes.STRING,
       primaryKey: true 
     },
     'amount': {

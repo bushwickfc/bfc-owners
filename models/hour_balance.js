@@ -2,15 +2,15 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('hour_balance', {
-    'owner_id': {
-      type: DataTypes.INTEGER,
+    'email': {
+      type: DataTypes.STRING,
     },
     'balance': {
       type: DataTypes.DOUBLE,
     },
   }, {
     tableName: 'hour_balance',
-    underscored: true,
+    
     timestamps: false,
     
   });

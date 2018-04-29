@@ -4,7 +4,6 @@ module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('owner_view', {
     'pos_id': {
       type: DataTypes.STRING,
-      primaryKey: true
     },
     'owner_type': {
       type: DataTypes.STRING,
@@ -17,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     'email': {
       type: DataTypes.STRING,
+      primaryKey: true
     },
     'first_name': {
       type: DataTypes.STRING,

@@ -2,8 +2,8 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('owner_owner_type', {
-    'owner_id': {
-      type: DataTypes.INTEGER,
+    'email': {
+      type: DataTypes.STRING,
       primaryKey: true 
     },
     'start_date': {

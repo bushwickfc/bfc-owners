@@ -6,13 +6,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       primaryKey: true 
     },
-    'owner_id': {
-      type: DataTypes.INTEGER,
+    'email': {
+      type: DataTypes.STRING,
       primaryKey: true 
     },
   }, {
     tableName: 'household',
-    underscored: true,
+    
     timestamps: false,
     
   });
