@@ -31,13 +31,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
     },
     'success': {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BOOLEAN,
     },
   }, {
     tableName: 'schema_version',
     underscored: true,
     timestamps: false,
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {

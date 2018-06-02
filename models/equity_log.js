@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'equity_log',
     underscored: true,
     
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {

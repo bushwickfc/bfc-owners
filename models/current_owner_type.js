@@ -11,9 +11,10 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     tableName: 'current_owner_type',
-    
+
+    underscored: true,
     timestamps: false,
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {
@@ -21,4 +22,3 @@ module.exports = (sequelize, DataTypes) => {
 
   return Model;
 };
-

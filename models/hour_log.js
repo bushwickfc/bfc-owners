@@ -27,15 +27,10 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'hour_log',
     underscored: true,
     
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {
-    Model.belongsTo(models.hour_reason, {
-      foreignKey: 'hour_reason',
-      targetKey: 'hour_reason',
-      as: '_hour_reason',
-    });
   };
 
   return Model;

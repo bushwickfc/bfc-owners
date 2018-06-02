@@ -21,6 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     'shopping_surrogate': {
       type: DataTypes.INTEGER,
     },
+    'owner_price': {
+      type: DataTypes.BOOLEAN,
+    },
     'created_at': {
       type: DataTypes.DATE,
     },
@@ -31,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'owner_type',
     underscored: true,
     
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {

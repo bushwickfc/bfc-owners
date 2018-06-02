@@ -36,11 +36,14 @@ module.exports = (sequelize, DataTypes) => {
     'city': {
       type: DataTypes.STRING,
     },
-    'country': {
+    'state': {
       type: DataTypes.STRING,
     },
     'zipcode': {
       type: DataTypes.STRING,
+    },
+    'payment_plan_delinquent': {
+      type: DataTypes.BOOLEAN,
     },
     'created_at': {
       type: DataTypes.DATE,
@@ -52,7 +55,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'owner',
     underscored: true,
     
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {

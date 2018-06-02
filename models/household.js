@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'household',
     
     timestamps: false,
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {

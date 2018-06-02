@@ -18,11 +18,14 @@ module.exports = (sequelize, DataTypes) => {
     'maximum_balance': {
       type: DataTypes.INTEGER,
     },
+    'owner_price': {
+      type: DataTypes.BOOLEAN,
+    },
   }, {
     tableName: 'hour_status',
     underscored: true,
     timestamps: false,
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {

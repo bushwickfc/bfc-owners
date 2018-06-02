@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'hour_reason',
     underscored: true,
     
-    
+    schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {
