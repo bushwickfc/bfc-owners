@@ -21,9 +21,6 @@ module.exports = (sequelize, DataTypes) => {
     'last_name': {
       type: DataTypes.STRING,
     },
-    'display_name': {
-      type: DataTypes.STRING,
-    },
     'join_date': {
       type: DataTypes.DATE,
     },
