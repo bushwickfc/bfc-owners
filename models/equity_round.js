@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  var Model = sequelize.define('hour_reason', {
-    'hour_reason': {
+  var Model = sequelize.define('equity_round', {
+    'equity_round': {
       type: DataTypes.STRING,
-      primaryKey: true
+      primaryKey: true 
     },
     'display_name': {
       type: DataTypes.STRING,
@@ -19,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
     },
   }, {
-    tableName: 'hour_reason',
+    tableName: 'equity_round',
     underscored: true,
-
-    schema: process.env.DATABASE_SCHEMA,
+    
+    
   });
 
   Model.associate = (models) => {

@@ -4,18 +4,18 @@ module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('hour_log', {
     'email': {
       type: DataTypes.STRING,
-      primaryKey: true 
+      primaryKey: true
     },
     'amount': {
       type: DataTypes.INTEGER,
     },
     'hour_reason': {
       type: DataTypes.STRING,
-      primaryKey: true 
+      primaryKey: true
     },
     'hour_date': {
       type: DataTypes.DATE,
-      primaryKey: true 
+      primaryKey: true
     },
     'created_at': {
       type: DataTypes.DATE,
@@ -26,13 +26,16 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     tableName: 'hour_log',
     underscored: true,
-    
+
     schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {
-  };
+    Model.belongsTo(models.hour_reason, {
+      foreignKey: 'hour_reason',
+      targetKey: 'hour_reason',
+      as: '_hour_reason',
+    });
 
   return Model;
 };
-

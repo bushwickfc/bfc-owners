@@ -1,16 +1,14 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  var Model = sequelize.define('hour_reason', {
-    'hour_reason': {
-      type: DataTypes.STRING,
+  var Model = sequelize.define('owner_equity_type', {
+    'owner_id': {
+      type: DataTypes.INTEGER,
       primaryKey: true
     },
-    'display_name': {
+    'equity_type': {
       type: DataTypes.STRING,
-    },
-    'description': {
-      type: DataTypes.STRING,
+      primaryKey: true
     },
     'created_at': {
       type: DataTypes.DATE,
@@ -19,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
     },
   }, {
-    tableName: 'hour_reason',
+    tableName: 'owner_equity_type',
     underscored: true,
 
     schema: process.env.DATABASE_SCHEMA,

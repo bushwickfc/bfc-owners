@@ -4,11 +4,11 @@ module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('owner_owner_type', {
     'email': {
       type: DataTypes.STRING,
-      primaryKey: true 
+      primaryKey: true
     },
     'start_date': {
       type: DataTypes.DATE,
-      primaryKey: true 
+      primaryKey: true
     },
     'end_date': {
       type: DataTypes.DATE,
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     tableName: 'owner_owner_type',
     underscored: true,
-    
+
     schema: process.env.DATABASE_SCHEMA,
   });
 
@@ -32,9 +32,8 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'owner_type',
       as: '_owner_type',
     });
-    
+
   };
 
   return Model;
 };
-
