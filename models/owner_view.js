@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DOUBLE,
     },
     'owner_price': {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BOOLEAN,
     },
   }, {
     tableName: 'owner_view',

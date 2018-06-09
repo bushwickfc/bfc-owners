@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('equity_round', {
     'equity_round': {
       type: DataTypes.STRING,
-      primaryKey: true 
+      primaryKey: true
     },
     'display_name': {
       type: DataTypes.STRING,
@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     tableName: 'equity_round',
     underscored: true,
-    
-    
+
+
   });
 
   Model.associate = (models) => {

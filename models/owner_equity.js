@@ -1,28 +1,25 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  var Model = sequelize.define('hour_status', {
-    'status': {
+  var Model = sequelize.define('owner_equity', {
+    'email': {
       type: DataTypes.STRING,
       primaryKey: true
     },
-    'display_name': {
-      type: DataTypes.STRING,
+    'paid': {
+      type: DataTypes.INTEGER,
+    },
+    'due': {
+      type: DataTypes.INTEGER,
     },
     'pos_display': {
       type: DataTypes.STRING,
-    },
-    'minimum_balance': {
-      type: DataTypes.INTEGER,
-    },
-    'maximum_balance': {
-      type: DataTypes.INTEGER,
     },
     'owner_price': {
       type: DataTypes.BOOLEAN,
     },
   }, {
-    tableName: 'hour_status',
+    tableName: 'owner_equity',
     underscored: true,
     timestamps: false,
     schema: process.env.DATABASE_SCHEMA,
@@ -33,4 +30,3 @@ module.exports = (sequelize, DataTypes) => {
 
   return Model;
 };
-

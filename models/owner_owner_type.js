@@ -2,10 +2,6 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('owner_owner_type', {
-    'email': {
-      type: DataTypes.STRING,
-      primaryKey: true
-    },
     'start_date': {
       type: DataTypes.DATE,
       primaryKey: true
@@ -32,7 +28,12 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'owner_type',
       as: '_owner_type',
     });
-
+    Model.belongsTo(models.owner, {
+      foreignKey: 'email',
+      targetKey: 'email',
+      primaryKey: true,
+      as: '_email',
+    });
   };
 
   return Model;
