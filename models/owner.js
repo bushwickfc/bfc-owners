@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     'email': {
       type: DataTypes.STRING,
-      primaryKey: true 
+      primaryKey: true
     },
     'first_name': {
       type: DataTypes.STRING,
@@ -51,13 +51,16 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     tableName: 'owner',
     underscored: true,
-    
+
     schema: process.env.DATABASE_SCHEMA,
   });
 
   Model.associate = (models) => {
+    Model.hasOne(models.owner_equity_type, {
+      foreignKey: 'email',
+      targetKey: 'email',
+    });
   };
 
   return Model;
 };
-

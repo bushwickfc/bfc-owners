@@ -2,8 +2,16 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('hour_log', {
+    'email': {
+      type: DataTypes.STRING,
+      primaryKey: true
+    },
     'amount': {
       type: DataTypes.INTEGER,
+    },
+    'hour_reason': {
+      type: DataTypes.STRING,
+      primaryKey: true
     },
     'hour_date': {
       type: DataTypes.DATE,
@@ -23,18 +31,6 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Model.associate = (models) => {
-    Model.belongsTo(models.hour_reason, {
-      foreignKey: 'hour_reason',
-      targetKey: 'hour_reason',
-      primaryKey: true,
-      as: '_hour_reason',
-    });
-    Model.belongsTo(models.owner, {
-      foreignKey: 'email',
-      targetKey: 'email',
-      primaryKey: true,
-      as: '_email',
-    });
   };
 
   return Model;
