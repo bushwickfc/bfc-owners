@@ -7,10 +7,10 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     'paid': {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DOUBLE,
     },
     'due': {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DOUBLE,
     },
     'pos_display': {
       type: DataTypes.STRING,

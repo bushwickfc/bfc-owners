@@ -33,6 +33,12 @@ module.exports = (sequelize, DataTypes) => {
     'owner_price': {
       type: DataTypes.BOOLEAN,
     },
+    'equity_paid': {
+      type: DataTypes.DOUBLE,
+    },
+    'equity_due': {
+      type: DataTypes.DOUBLE,
+    },
   }, {
     tableName: 'owner_view',
     underscored: true,
@@ -45,4 +51,3 @@ module.exports = (sequelize, DataTypes) => {
 
   return Model;
 };
-
