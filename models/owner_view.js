@@ -30,6 +30,12 @@ module.exports = (sequelize, DataTypes) => {
     'hour_balance': {
       type: DataTypes.DOUBLE,
     },
+    'equity_current': {
+      type: DataTypes.BOOLEAN,
+    },
+    'hours_current': {
+      type: DataTypes.BOOLEAN,
+    },
     'owner_price': {
       type: DataTypes.BOOLEAN,
     },
