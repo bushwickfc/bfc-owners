@@ -11,9 +11,6 @@ module.exports = (sequelize, DataTypes) => {
     'owner_type_name': {
       type: DataTypes.STRING,
     },
-    'status': {
-      type: DataTypes.STRING,
-    },
     'email': {
       type: DataTypes.STRING,
       primaryKey: true
