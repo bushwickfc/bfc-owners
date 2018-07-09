@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
     },
     'created_at': {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
     },
     'updated_at': {
       type: DataTypes.DATE,
