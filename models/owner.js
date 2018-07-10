@@ -39,9 +39,6 @@ module.exports = (sequelize, DataTypes) => {
     'zipcode': {
       type: DataTypes.STRING,
     },
-    'payment_plan_delinquent': {
-      type: DataTypes.BOOLEAN,
-    },
     'created_at': {
       type: DataTypes.DATEONLY,
     },
@@ -56,10 +53,6 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Model.associate = (models) => {
-    Model.hasOne(models.owner_equity_type, {
-      foreignKey: 'email',
-      targetKey: 'email',
-    });
   };
 
   return Model;
