@@ -42,6 +42,9 @@ module.exports = (sequelize, DataTypes) => {
     'equity_due': {
       type: DataTypes.DOUBLE,
     },
+    'equity_delinquent': {
+      type: DataTypes.DOUBLE,
+    },
   }, {
     tableName: 'owner_view',
     underscored: true,
