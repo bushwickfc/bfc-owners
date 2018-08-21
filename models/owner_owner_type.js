@@ -10,6 +10,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATEONLY,
       primaryKey: true
     },
+    'owner_type': {
+      type: DataTypes.STRING
+    },
     'end_date': {
       type: DataTypes.DATEONLY,
     },
@@ -27,11 +30,6 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Model.associate = (models) => {
-    Model.belongsTo(models.owner_type, {
-      foreignKey: 'owner_type',
-      targetKey: 'owner_type',
-      as: '_owner_type',
-    });
   };
 
   return Model;
