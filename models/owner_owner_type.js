@@ -2,16 +2,18 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('owner_owner_type', {
+    'id': {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     'email': {
       type: DataTypes.STRING,
-      primaryKey: true
     },
     'start_date': {
       type: DataTypes.DATEONLY,
-      primaryKey: true
     },
     'owner_type': {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     'end_date': {
       type: DataTypes.DATEONLY,
