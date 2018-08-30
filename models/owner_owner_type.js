@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('owner_owner_type', {
     'id': {
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       primaryKey: true
     },
     'email': {
