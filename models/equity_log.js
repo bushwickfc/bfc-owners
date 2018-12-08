@@ -2,16 +2,19 @@
 
 module.exports = (sequelize, DataTypes) => {
   var Model = sequelize.define('equity_log', {
+    'id': {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     'email': {
       type: DataTypes.STRING,
-      primaryKey: true 
     },
     'amount': {
       type: DataTypes.DOUBLE,
     },
     'transaction_date': {
       type: DataTypes.DATE,
-      primaryKey: true 
     },
     'created_at': {
       type: DataTypes.DATE,
@@ -22,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     tableName: 'equity_log',
     underscored: true,
-    
+
     schema: process.env.DATABASE_SCHEMA,
   });
 
@@ -31,4 +34,3 @@ module.exports = (sequelize, DataTypes) => {
 
   return Model;
 };
-
