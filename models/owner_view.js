@@ -51,6 +51,9 @@ module.exports = (sequelize, DataTypes) => {
     'plan_join_date': {
       type: DataTypes.DATE,
     },
+    'equity_type': {
+      type: DataTypes.STRING,
+    },
   }, {
     tableName: 'owner_view',
     underscored: true,

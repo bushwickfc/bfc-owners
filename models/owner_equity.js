@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
     'owner_price': {
       type: DataTypes.BOOLEAN,
     },
+    'equity_type': {
+      type: DataTypes.STRING,
+    },
   }, {
     tableName: 'owner_equity',
     underscored: true,
