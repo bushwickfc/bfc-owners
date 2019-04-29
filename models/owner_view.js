@@ -54,6 +54,9 @@ module.exports = (sequelize, DataTypes) => {
     'equity_type': {
       type: DataTypes.STRING,
     },
+    'equity_owed_total': {
+      type: DataTypes.DOUBLE,
+    },
   }, {
     tableName: 'owner_view',
     underscored: true,
