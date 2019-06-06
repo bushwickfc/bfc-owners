@@ -6,6 +6,9 @@
     "start": "node ./bin/www",
     "dev": "node -r dotenv/config ./bin/www"
   },
+  "engines": {
+    "node": "10.15.0"
+  },
   "dependencies": {
     "body-parser": "~1.15.1",
     "chalk": "~1.1.3",
